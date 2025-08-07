@@ -13,7 +13,8 @@ export default function Counter() {
         value={val}
         onChange={(e) => {
           const num = e.target.value.replace(/[^0-9]/g, '');
-          setVal(Math.max(0, Number(num)));
+          // setVal(Math.max(0, Number(num)));
+          setVal(num === '' ? 0:Number(num));
         }}
       />
       <Button className='w-72' onClick={() => increment()}>

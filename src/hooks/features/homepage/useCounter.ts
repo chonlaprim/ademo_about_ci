@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 export default function useCounter() {
   const [count, setCount] = useState(0);
@@ -7,6 +7,6 @@ export default function useCounter() {
   function increment() {
     setCount((count) => count + val);
   }
-
+  
   return { count, increment, val, setVal };
 }

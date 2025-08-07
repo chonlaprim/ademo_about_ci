@@ -20,6 +20,8 @@ describe('useCounter', () => {
     const { result } = renderHook(() => useCounter());
     act(() => {
       result.current.setVal(5);
+    });
+    act(() => {
       result.current.increment();
     });
     expect(result.current.count).toBe(5);
@@ -29,6 +31,9 @@ describe('useCounter', () => {
     const { result } = renderHook(() => useCounter());
     act(() => {
       result.current.setVal(10);
+    });
+    act(() => {
+      result.current.increment();
     });
     expect(result.current.count).toBe(10);
   });
@@ -47,6 +52,9 @@ describe('useCounter', () => {
     const { result } = renderHook(() => useCounter());
     act(() => {
       result.current.setVal(-7);
+    });
+    act(() => {
+      result.current.increment();
     });
     expect(result.current.count).toBe(-7);
   });
